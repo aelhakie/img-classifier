@@ -7,18 +7,18 @@ Contents:
   * train/ : folder with the train dataset classified in two folders based on class: Benign and Malignant  
   * test/ : folder with the test dataset classified in two folders based on class: Benign and Malignant  
   * figures/ : folder with graphs of training  
-  * requirements.txt: file with list of required python and conda libraries to install  
+  * environment.yml : file with list of required python and conda libraries to install  
 
-After downloading all the contents of this repository and navigating to it via your terminal, use this terminal command to create a new conda environment using the requirements.txt file:  
+After downloading all the contents of this repository and navigating to it via your terminal, use this terminal command to create a new conda environment using the evironment.yml file:  
 ```
-    conda create --name myenv --file requirements.txt
+    conda create --file environment.yml
 
 ```
 Make sure the correct versions of the following libraries are installed, if you intend to use a GPU:  
   * CUDA® Toolkit 12.3.  
   * cuDNN SDK 8.9.7.
 
-Once the  installations are complete, your ready to use the notebook, of course selecting the proper kernel from conda
+Once the  installations are complete, your ready to use the notebook, of course selecting the proper kernel (tf) from conda
 
 
 
