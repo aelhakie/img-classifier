@@ -66,14 +66,14 @@ We trained multiple versions of our model with multiple preprocessing techniques
    * Using rescaling and samplewise centering
   
 We used different initializations for EfficientNet-B6:  
-   * Using model weights when pretrained on ImageNet dataset for which we trained over 10 epochs
-   * Random initial weights for which we trained over 20 epochs  
+   * Weights pretrained on ImageNet dataset
+   * Random initial weights
   
 ## Evaluation
 
-| Model                                  | Accuracy | AUC   |
-|----------------------------------------|----------|-------|
-| efficient_net_b6_samplewise.h5         | 0.935    | 0.958 |
-| efficient_net_b6_featurewise.h5        | 0.900    | 0.938 |
-| efficient_net_b6_random_samplewise.h5  | 0.831    | 0.931 |
-| efficient_net_b6_random_featurewise.h5 | 0.871    | 0.945 |
+| Model                                  | Accuracy  | AUC    |
+|----------------------------------------|---------- | -------|
+| efficient_net_b6_samplewise.h5         | 0.9386    | 0.9833 |
+| efficient_net_b6_featurewise.h5        | 0.9327    | 0.9800 |
+| efficient_net_b6_samplewise_40.h5      | 0.9523    | 0.9864 |
+| efficient_net_b6_random_featurewise.h5 | 0.8335    | 0.9434 |
