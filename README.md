@@ -47,6 +47,7 @@ Image Processing:
    * Rescaling pixel values to [0,1] interval
    * Samplewise centtering, centering mean of each image at 0
    * Featurewise centering, subtracting the mean image out of each image
+   * Center cropping, where we only take the center square of 180 by 180 from the original 224 by 224 image  
   
 Augmmentation:
    * Rotation
@@ -64,6 +65,7 @@ Parameters for training used:
 We trained multiple versions of our model with multiple preprocessing techniques:  
    * Using rescaling and featurewise centering
    * Using rescaling and samplewise centering
+   * Using rescaling, featurewise centering and cropping the center (180,180) of the image  
   
 We used different initializations for EfficientNet-B6:  
    * Weights pretrained on ImageNet dataset
@@ -71,9 +73,10 @@ We used different initializations for EfficientNet-B6:
   
 ## Evaluation
 
-| Model                                  | Accuracy  | AUC    |
-|----------------------------------------|---------- | -------|
-| efficient_net_b6_samplewise.h5         | 0.9386    | 0.9833 |
-| efficient_net_b6_featurewise.h5        | 0.9327    | 0.9800 |
-| efficient_net_b6_samplewise_40.h5      | 0.9523    | 0.9864 |
-| efficient_net_b6_random_featurewise.h5 | 0.8335    | 0.9434 |
+| Model                                   | Accuracy  | AUC    |
+|---------------------------------------- |---------- | -------|
+| efficient_net_b6_samplewise.h5          | 0.9386    | 0.9833 |
+| efficient_net_b6_featurewise.h5         | 0.9327    | 0.9800 |
+| efficient_net_b6_samplewise_20_epoch.h5 | 0.9523    | 0.9864 |
+| efficient_net_b6_random_featurewise.h5  | 0.8335    | 0.9434 |
+| efficient_net_b6_samplewise_180.h5      | 0.9605    | 0.9844 |
